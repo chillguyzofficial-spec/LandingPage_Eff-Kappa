@@ -47,23 +47,3 @@
   els.forEach((el) => io.observe(el));
 })();
 
-
-// Telefono: in cima alla pagina l'header è un normale blocco della pagina (non può coprire
-// foto o testo); diventa fisso in alto solo dopo averlo superato scorrendo, e torna normale
-// appena si rientra in cima. Gli header sempre fixed/sticky su iPhone coprivano l'inizio pagina.
-(function () {
-  var h = document.querySelector('.site-header');
-  if (!h) return;
-  var mq = window.matchMedia('(max-width: 900px)');
-  var stuck = false;
-  function update() {
-    var s = mq.matches && window.scrollY > h.offsetHeight;
-    if (s === stuck) return;
-    stuck = s;
-    document.body.style.paddingTop = s ? h.offsetHeight + 'px' : '';
-    document.documentElement.classList.toggle('header-stuck', s);
-  }
-  window.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', update);
-  update();
-})();

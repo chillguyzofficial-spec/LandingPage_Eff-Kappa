@@ -86,11 +86,10 @@ main, .site-footer { position: relative; z-index: 1; }
 @media (max-width: 520px) {
   .site-nav a[href="#metodo"] { display: none; }
 }
-/* Su telefono: header nel flusso in cima, fisso solo dopo averlo superato (js/main.js), sfondo pieno, senza blur:
+/* Su telefono: header sempre visibile (sticky), sfondo pieno, senza blur:
    su iPhone il blur su un header attaccato in alto lo fa spostare/sfarfallare scorrendo. */
 @media (max-width: 900px) {
-  .site-header { position: relative; background: var(--bg); -webkit-backdrop-filter: none; backdrop-filter: none; }
-  .header-stuck .site-header { position: fixed; top: 0; left: 0; right: 0; }
+  .site-header { background: var(--bg); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
 
 /* ---------- Angoli a mirino (dal bigliettino) ---------- */
