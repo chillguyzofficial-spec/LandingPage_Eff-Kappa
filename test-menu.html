@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Prova menu</title>
+<style>
+  body { margin: 0; font: 18px/1.5 -apple-system, system-ui, sans-serif; background: #f6f2ea; color: #222; }
+  header { top: 0; left: 0; right: 0; z-index: 10; height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; background: #1d4a3a; color: #fff; font-weight: 600; }
+  .spacer { height: 64px; }
+  .first { background: #ffd54a; padding: 16px; font-weight: 700; }
+  main p { margin: 0; padding: 10px 16px; border-bottom: 1px solid #ddd; }
+  .vars { padding: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .vars a { padding: 10px 14px; border-radius: 8px; background: #fff; border: 1px solid #bbb; color: #222; text-decoration: none; }
+  .vars a.on { background: #1d4a3a; color: #fff; }
+  #read { position: fixed; right: 8px; bottom: 90px; z-index: 20; background: rgba(0,0,0,.8); color: #fff; font: 12px/1.4 monospace; padding: 6px 8px; border-radius: 6px; }
+
+  /* varianti */
+  .v1 header { position: sticky; }
+  .v2 header { position: fixed; }
+  .v3 { overflow-x: clip; scroll-behavior: smooth; }
+  .v3 header { position: sticky; }
+  .v4 { overflow-x: clip; scroll-behavior: smooth; }
+  .v4 header { position: fixed; }
+  .v5 header { position: relative; }
+</style>
+<script>
+  var V = (location.search.match(/v=(\d)/) || [, '1'])[1];
+  document.documentElement.className = 'v' + V;
+</script>
+</head>
+<body>
+<script>if (V === '2' || V === '4') document.write('<div class="spacer"></div>');</script>
+<header><span>MENU</span><span id="vn"></span></header>
+<main>
+  <div class="first">▲ INIZIO PAGINA — questa riga gialla deve vedersi tutta quando torni in cima</div>
+  <div class="vars">
+    <a href="?v=1">1 sticky</a>
+    <a href="?v=2">2 fixed</a>
+    <a href="?v=3">3 sticky + clip</a>
+    <a href="?v=4">4 fixed + clip</a>
+    <a href="?v=5">5 non fisso</a>
+  </div>
+  <div id="rows"></div>
+</main>
+<div id="read"></div>
+<script>
+  document.getElementById('vn').textContent = 'VARIANTE ' + V;
+  document.querySelectorAll('.vars a').forEach(function (a) { if (a.getAttribute('href') === '?v=' + V) a.className = 'on'; });
+  var rows = '';
+  for (var i = 1; i <= 120; i++) rows += '<p>Riga ' + i + ' — testo di prova per scorrere la pagina</p>';
+  document.getElementById('rows').innerHTML = rows;
+  var r = document.getElementById('read');
+  function upd() {
+    var vv = window.visualViewport;
+    r.textContent = 'scrollY ' + Math.round(scrollY) + ' | inner ' + innerHeight + (vv ? ' | vvTop ' + Math.round(vv.offsetTop) + ' | vvH ' + Math.round(vv.height) : '');
+  }
+  addEventListener('scroll', upd, { passive: true });
+  addEventListener('resize', upd);
+  if (window.visualViewport) visualViewport.addEventListener('resize', upd);
+  upd();
+</script>
+</body>
+</html>
