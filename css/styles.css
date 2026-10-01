@@ -408,3 +408,9 @@ a.project-media:hover .browser { border-color: rgba(212, 175, 106, .5); transfor
 .faq-item[open] .faq-icon::after { transform: rotate(0deg); }
 .faq-item p { padding: 0 0 24px; max-width: 64ch; color: var(--muted); font-size: 16px; }
 @media (max-width: 520px) { .site-nav a[href="#faq"] { display: none; } }
+
+/* Fix bug hunt 2026-10-01: aree da toccare più comode su telefono, senza cambiare l'aspetto */
+.site-nav a, .wordmark, .project-link, .mail, a[href="#top"] { position: relative; }
+.site-nav a::before, .wordmark::before, .project-link::before, .mail::before, a[href="#top"]::before { content: ''; position: absolute; inset: -10px -6px; }
+/* anteprima gestionale: a 320px "Occupazione" non entrava nel riquadro */
+@media (max-width: 360px) { .dash-kpis small { font-size: 6.5px; letter-spacing: -.01em; } }
