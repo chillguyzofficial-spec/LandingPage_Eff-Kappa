@@ -86,11 +86,10 @@ main, .site-footer { position: relative; z-index: 1; }
 @media (max-width: 520px) {
   .site-nav a[href="#metodo"] { display: none; }
 }
-/* Su telefono l'header non resta attaccato in alto: su iPhone (Safari) gli header fissi/sticky
-   si spostano quando la barra degli indirizzi si apre/chiude e coprono il testo in cima. */
+/* Su telefono: header sempre visibile (sticky, dentro la pagina) ma a sfondo pieno, senza blur:
+   su iPhone il blur su un header attaccato in alto lo fa spostare/sfarfallare scorrendo. */
 @media (max-width: 900px) {
-  html { scroll-padding-top: 0; }
-  .site-header { position: relative; background: var(--bg); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .site-header { background: var(--bg); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
 
 /* ---------- Angoli a mirino (dal bigliettino) ---------- */
