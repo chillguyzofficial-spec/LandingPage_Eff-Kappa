@@ -1356,3 +1356,22 @@ a.contact-phone:hover { color: var(--gold-hi); }
 /* Chi c'è dietro più compatta: titolo più piccolo degli altri, la foto parte in alto */
 .about .section-head h2 { font-size: clamp(30px, 3.4vw, 52px); }
 .about-text .section-head { margin-bottom: 20px; }
+
+/* ---------- Chi c'è dietro: punti espandibili (come le Domande) ---------- */
+.spec-x { margin-top: 28px; border-top: 1px solid var(--line-2); }
+.spec-item { border-bottom: 1px solid var(--line-2); }
+.spec-item summary { display: grid; grid-template-columns: 28px minmax(110px, 150px) 1fr 14px; align-items: center; gap: 14px; min-height: 56px; padding: 8px 0; cursor: pointer; list-style: none; }
+.spec-item summary::-webkit-details-marker { display: none; }
+.spec-n { color: var(--muted-2); font-size: 12px; }
+.spec-t { color: var(--gold); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+.spec-breve { color: var(--cream); font-size: clamp(15px, 1.2vw, 17px); }
+.spec-item summary:hover .spec-breve { color: var(--gold-hi); }
+.spec-item[open] .faq-icon::after { transform: rotate(0deg); }
+.spec-item p { margin: 0 0 16px; padding-left: calc(28px + 14px); color: var(--muted); font-size: 15px; line-height: 1.55; max-width: 64ch; }
+@media (max-width: 560px) {
+  .spec-item summary { grid-template-columns: 24px 1fr 14px; gap: 4px 10px; }
+  .spec-t { grid-column: 2; }
+  .spec-breve { grid-column: 2; grid-row: 2; font-size: 15px; }
+  .spec-item summary .faq-icon { grid-column: 3; grid-row: 1 / span 2; }
+  .spec-item p { padding-left: 34px; }
+}
