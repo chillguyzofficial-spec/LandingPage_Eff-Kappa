@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=58">
+<link rel="stylesheet" href="css/styles.css?v=59">
 <script>
 (function () {
   var h = document.documentElement;
@@ -128,7 +128,7 @@
       <div class="section-head" data-reveal>
         <p class="eyebrow"><span class="idx">02</span>Lavori</p>
         <h2>Sei lavori, sei settori.</h2>
-        <p class="section-sub">Uno per settore, tutti aperti e navigabili. Scegli un lavoro per vederne le pagine, sul computer e sul telefono.</p>
+        <p class="section-sub">Uno per settore, tutti aperti e navigabili, e un settimo in lavorazione. Scegli un lavoro per vederne le pagine, sul computer e sul telefono.</p>
       </div>
 
       <div class="vt" data-vt data-reveal>
@@ -219,10 +219,23 @@
             </span>
           </a>
         </li>
+        <li class="vt-item vt-item-presto">
+          <a class="vt-card" draggable="false" data-presto>
+            <span class="vt-foto" role="img" aria-label="Lavoro in lavorazione, non ancora visibile">
+              <span class="vt-iphone"><span class="vt-schermo vt-presto" aria-hidden="true"><i></i><i></i><i></i><b class="mono">In lavorazione</b><span class="vt-presto-barra"><span></span></span></span><span class="vt-isola" aria-hidden="true"></span></span>
+            </span>
+            <span class="vt-info">
+              <span class="vt-riga"><span class="vt-dove mono"><b>07</b>Abbigliamento</span><span class="vt-stato mono is-presto">Presto</span></span>
+              <span class="vt-titolo"><span class="vt-nome">In lavorazione</span><span class="vt-tipo mono">Negozio online</span></span>
+              <span class="vt-frase">Un negozio online di abbigliamento, costruito insieme al cliente. Presto visibile qui.</span>
+              <span class="vt-vai vt-vai-presto">Presto online</span>
+            </span>
+          </a>
+        </li>
         </ol>
         <div class="vt-comandi">
           <button type="button" class="round" data-vt-prev aria-label="Lavoro precedente"><span aria-hidden="true">←</span></button>
-          <p class="mono vt-conta" aria-live="polite"><span data-vt-count>01</span> / 06</p>
+          <p class="mono vt-conta" aria-live="polite"><span data-vt-count>01</span> / 07</p>
           <button type="button" class="round" data-vt-next aria-label="Lavoro successivo"><span aria-hidden="true">→</span></button>
         </div>
       </div>
@@ -861,6 +874,6 @@
     <a href="#top">Torna su ↑</a>
   </footer>
 
-  <script src="js/main.js?v=22"></script>
+  <script src="js/main.js?v=23"></script>
 </body>
 </html>

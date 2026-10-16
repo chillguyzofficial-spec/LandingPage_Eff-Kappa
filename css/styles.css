@@ -1296,3 +1296,20 @@ html.opening .gate-btn { pointer-events: none; }
   .review-proof { max-width: 210px; }
 }
 @media (prefers-reduced-motion: reduce) { .review-proof img { transition: none; } }
+
+/* ---------- Vetrina: lavoro in arrivo (nessuna schermata, solo uno schermo astratto) ---------- */
+.vt-presto { position: relative; display: grid; place-items: center; align-content: center; gap: 2.4cqh; background: radial-gradient(circle at 30% 25%, #2a2116, #0b0907 70%); }
+.vt-presto i { position: absolute; border-radius: 50%; filter: blur(2.4cqh); opacity: .55; animation: presto-nuvola 9s ease-in-out infinite alternate; }
+.vt-presto i:nth-child(1) { width: 26cqh; height: 26cqh; left: -6cqh; top: 8cqh; background: rgba(212, 175, 106, .5); }
+.vt-presto i:nth-child(2) { width: 20cqh; height: 20cqh; right: -5cqh; top: 34cqh; background: rgba(244, 241, 234, .18); animation-delay: -3s; }
+.vt-presto i:nth-child(3) { width: 22cqh; height: 22cqh; left: 6cqh; bottom: 2cqh; background: rgba(212, 175, 106, .3); animation-delay: -6s; }
+.vt-presto b { position: relative; font-weight: 500; font-size: 1.9cqh; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-hi); }
+.vt-presto-barra { position: relative; width: 18cqh; height: .35cqh; border-radius: 1cqh; background: rgba(244, 241, 234, .15); overflow: hidden; }
+.vt-presto-barra span { position: absolute; inset: 0 auto 0 0; width: 40%; border-radius: inherit; background: var(--gold-hi); animation: presto-barra 2.4s ease-in-out infinite; }
+.vt-stato.is-presto { color: var(--gold-hi); border-color: rgba(212, 175, 106, .5); }
+.vt-item-presto .vt-card { cursor: default; }
+.vt-item-presto .vt-card:hover .vt-iphone { transform: none; }
+.vt-vai-presto, .vt-item-presto .vt-card:hover .vt-vai { color: var(--muted); }
+@keyframes presto-nuvola { to { transform: translate(3cqh, -4cqh) scale(1.15); } }
+@keyframes presto-barra { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+@media (prefers-reduced-motion: reduce) { .vt-presto i, .vt-presto-barra span { animation: none; } }

@@ -324,7 +324,9 @@
     // tocco su una scheda spenta: la porta al centro invece di aprire il lavoro
     items.forEach((it, k) => it.querySelector('a').addEventListener('click', (e) => {
       if (moved) { e.preventDefault(); moved = false; return; }
-      if (!isStart() && !it.classList.contains('is-active')) { e.preventDefault(); goTo(k); }
+      if (!isStart() && !it.classList.contains('is-active')) { e.preventDefault(); goTo(k); return; }
+      // lavoro in arrivo: non c'è ancora niente da aprire
+      if (e.currentTarget.hasAttribute('data-presto')) e.preventDefault();
     }));
     let t = null;
     track.addEventListener('scroll', () => { clearTimeout(t); t = setTimeout(update, 60); }, { passive: true });
