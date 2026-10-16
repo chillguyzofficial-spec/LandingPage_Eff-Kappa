@@ -1337,3 +1337,9 @@ html.opening .gate-btn { pointer-events: none; }
 .svc-nota { max-width: 62ch; margin: clamp(22px, 3vh, 32px) 0 0; padding: 16px 20px; border-left: 2px solid var(--gold); background: rgba(212, 175, 106, .06); border-radius: 0 12px 12px 0; color: var(--muted); font-size: 16px; line-height: 1.55; }
 .svc-nota b { color: var(--cream); font-weight: 500; }
 .svc-meta .mono:first-child b { color: var(--gold-hi); font-size: 15px; }
+
+/* recensione verificata: bollino accanto al nome, il metodo è spiegato nel sottotitolo della sezione */
+.review-chi { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.review-ok { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px 5px 8px; border-radius: 999px; border: 1px solid rgba(143, 209, 147, .45); color: #8fd193; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.review-ok svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.review-come { color: var(--cream); font-weight: 500; }
