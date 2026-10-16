@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=63">
+<link rel="stylesheet" href="css/styles.css?v=64">
 <script>
 (function () {
   var h = document.documentElement;
@@ -32,7 +32,8 @@
 })();
 </script>
 </head>
-<body>
+<body id="top">
+<a class="salta" href="#main">Salta al contenuto</a>
 
   <!-- Apertura: schermo nero con FK, al tocco si apre come due ante -->
   <div class="gate" data-gate>
@@ -57,7 +58,7 @@
     </nav>
   </header>
 
-  <main id="top">
+  <main id="main" tabindex="-1">
 
     <!-- Apertura -->
     <section class="hero">
@@ -85,8 +86,8 @@
       </figure>
 
       <dl class="stats hero-in">
-        <div><dt>Lavori da aprire</dt><dd><span data-count-to="6">6</span></dd></div>
-        <div><dt>Accessibilità, test di Google</dt><dd><span data-count-to="100">100</span><small>/100</small></dd></div>
+        <div><dt>Lavori in vetrina</dt><dd><span data-count-to="6">6</span></dd></div>
+        <div><dt>Accessibilità · Lighthouse</dt><dd><span data-count-to="100">100</span><small>/100</small></dd></div>
         <div><dt>Tempo di risposta</dt><dd><span data-count-to="24">24</span><small> h</small></dd></div>
         <div><dt>Assistenza inclusa</dt><dd><span data-count-to="30">30</span><small> giorni</small></dd></div>
       </dl>
@@ -110,16 +111,16 @@
         <div class="about-text">
           <div class="section-head" data-reveal>
             <p class="eyebrow"><span class="idx">01</span>Chi c'è dietro</p>
-            <h2 data-words>Ogni sito, scritto riga per riga.</h2>
+            <h2 data-words>Codice scritto a mano, da chi poi lo mantiene.</h2>
           </div>
-          <p class="about-lead" data-reveal>Sono Francesco, sviluppatore. Siti, gestionali e app li progetto, li scrivo e li pubblico io, da solo: quando chiedi una modifica la leggo, la faccio e te la mando da vedere.</p>
+          <p class="about-lead" data-reveal>Sono Francesco Mascolo, sviluppatore. Progetto, scrivo e pubblico da solo ogni sito, gestionale e app, dal primo schema alla messa online: niente temi già pronti, niente programmi che montano pagine a blocchi, nessun passaggio di mano. Su ogni progetto, anche un sito di quartiere, uso lo stesso metodo: ogni modifica al codice registrata, prove prima della consegna, nessuna sorpresa dopo.</p>
 
           <dl class="spec" data-reveal>
-            <div style="--i:0"><dt><span class="mono">01</span>Cosa faccio</dt><dd>Siti, negozi online, gestionali e app da installare</dd></div>
-            <div style="--i:1"><dt><span class="mono">02</span>Strumenti</dt><dd>Codice scritto a mano; Next.js e Node.js per i gestionali; Shopify per i negozi con tanti prodotti</dd></div>
-            <div style="--i:2"><dt><span class="mono">03</span>Controlli</dt><dd>Prove automatiche su telefono, tablet e computer prima di ogni consegna</dd></div>
-            <div style="--i:3"><dt><span class="mono">04</span>Primo sito online</dt><dd><span class="spec-live"></span>Hedoné, Vimodrone <em>· da settembre 2026</em></dd></div>
-            <div style="--i:4"><dt><span class="mono">05</span>Contatti</dt><dd>WhatsApp ed email <em>· risposta entro 24 ore</em></dd></div>
+            <div style="--i:0"><dt><span class="mono">01</span>Cosa faccio</dt><dd>Siti vetrina, negozi online, gestionali web e app da installare dal browser (PWA)</dd></div>
+            <div style="--i:1"><dt><span class="mono">02</span>Strumenti</dt><dd>HTML, CSS e JavaScript scritti a mano per i siti; Next.js e Node.js per i gestionali; Shopify e Stripe per i negozi con molti prodotti</dd></div>
+            <div style="--i:2"><dt><span class="mono">03</span>Prestazioni</dt><dd>Immagini WebP caricate solo quando servono, tutto pensato prima per il telefono, accessibilità misurata con Lighthouse</dd></div>
+            <div style="--i:3"><dt><span class="mono">04</span>Controlli</dt><dd>Prove automatiche su telefono, tablet e computer prima di ogni consegna <em>· oltre 100 sui percorsi d'acquisto di un negozio, oltre 400 su sito e app</em></dd></div>
+            <div style="--i:4"><dt><span class="mono">05</span>Proprietà</dt><dd>Codice, dominio e spazio web a nome del cliente, con tutti i file consegnati</dd></div>
           </dl>
         </div>
       </div>
@@ -130,7 +131,7 @@
       <div class="section-head" data-reveal>
         <p class="eyebrow"><span class="idx">02</span>Lavori</p>
         <h2>Sei lavori, sei settori.</h2>
-        <p class="section-sub">Uno per settore, tutti aperti e navigabili, e un settimo in lavorazione. Scegli un lavoro per vederne le pagine, sul computer e sul telefono.</p>
+        <p class="section-sub">Uno per settore: cinque aperti e navigabili, il gestionale in dimostrazione su richiesta e un settimo in lavorazione. Scegli un lavoro per vederne le pagine, sul computer e sul telefono.</p>
       </div>
 
       <div class="vt" data-vt data-reveal>
@@ -279,11 +280,11 @@
             <div class="project-meta"><span class="badge badge-live">Online</span><span class="mono">Ristorante · sito vetrina · 2026</span></div>
             <h4>Hedoné</h4>
             <p class="project-sub">Ristorante e lounge bar sul Naviglio Martesana, a Vimodrone.</p>
-            <p class="project-text">Cinque pagine scritte da zero al posto del vecchio WordPress: menù con gli ingredienti a un tocco, serate ed eventi, prenotazione collegata alla piattaforma del ristorante.</p>
+            <p class="project-text">Quattro pagine e l'informativa privacy, scritte da zero al posto del vecchio WordPress: menù con gli ingredienti a un tocco, serate ed eventi, prenotazione collegata alla piattaforma del ristorante.</p>
             <ul class="results">
               <li>Online sul dominio del cliente da settembre 2026</li>
               <li>I vecchi indirizzi portano ai nuovi: nessuna pagina rotta da Google</li>
-              <li>Accessibilità 100/100 nel test di Google</li>
+              <li>Accessibilità 100/100 su Lighthouse, il test di Google</li>
             </ul>
             <div class="project-links">
               <a class="project-link" href="https://www.hedonevimodrone.it/">Vedi il sito online <span aria-hidden="true">↗</span></a>
@@ -322,7 +323,7 @@
             <ul class="results">
               <li>Foto a tutta pagina, mai tagliate</li>
               <li>Tre pagine: home, storia e manifesto</li>
-              <li>Accessibilità 100/100 nel test di Google</li>
+              <li>Accessibilità 100/100 su Lighthouse, il test di Google</li>
             </ul>
             <div class="project-links">
               <a class="project-link" href="https://chillguyzofficial-spec.github.io/ossidiana/">Vedi il sito online <span aria-hidden="true">↗</span></a>
@@ -412,7 +413,7 @@
             <ul class="results">
               <li>Niente foto prima e dopo né offerte, come chiedono le regole sulla pubblicità sanitaria</li>
               <li>Logo e icone disegnati su misura</li>
-              <li>Accessibilità 100/100 nel test di Google</li>
+              <li>Accessibilità 100/100 su Lighthouse, il test di Google</li>
             </ul>
             <div class="project-links">
               <a class="project-link" href="https://chillguyzofficial-spec.github.io/StudioLumea_Dentistico/">Vedi il sito online <span aria-hidden="true">↗</span></a>
@@ -685,51 +686,51 @@
             <tbody>
             <tr style="--r:0">
               <th scope="row" tabindex="0"><span class="cmp-voce">Con chi parli</span><span class="cmp-tip">Ogni passaggio in più tra te e chi scrive il codice è un messaggio che può cambiare per strada.</span></th>
-              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Di solito un commerciale o un responsabile di progetto, poi chi sviluppa</span></td>
+              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Di solito un commerciale o un responsabile di progetto, poi chi sviluppa</span></td>
               <td class="cmp-col-fdt cmp-no" data-who="Fai da te"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M7 7l10 10M17 7 7 17"/></svg><span class="sr-only">No: </span></span><span class="cmp-txt">Con nessuno: lo costruisci tu</span></td>
-              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Con lui, quando ha tempo</span></td>
+              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Con lui, quando ha tempo</span></td>
               <td class="cmp-col-me cmp-si" data-who="Eff$Kappa"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="m6 12.5 4 4 8-9"/></svg><span class="sr-only">Sì: </span></span><span class="cmp-txt">Direttamente con chi scrive il codice</span></td>
             </tr>
             <tr style="--r:1">
               <th scope="row" tabindex="0"><span class="cmp-voce">Una bozza prima di decidere</span><span class="cmp-tip">Vedi com'è il tuo sito prima di pagare, e lo cambiamo finché non ti convince.</span></th>
-              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Dipende dall'agenzia</span></td>
+              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">A volte, spesso dopo un acconto</span></td>
               <td class="cmp-col-fdt cmp-no" data-who="Fai da te"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M7 7l10 10M17 7 7 17"/></svg><span class="sr-only">No: </span></span><span class="cmp-txt">Lo costruisci tu, mentre impari</span></td>
-              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Dipende</span></td>
+              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Di solito no: lo vedi a lavoro finito</span></td>
               <td class="cmp-col-me cmp-si" data-who="Eff$Kappa"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="m6 12.5 4 4 8-9"/></svg><span class="sr-only">Sì: </span></span><span class="cmp-txt">Insieme al preventivo, e la cambiamo subito se qualcosa non ti piace</span></td>
             </tr>
             <tr style="--r:2">
               <th scope="row" tabindex="0"><span class="cmp-voce">Come è fatto</span><span class="cmp-tip">Un sito scritto per la tua attività dice chi sei; un modello dice solo quale modello hai scelto.</span></th>
-              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Spesso parte da un tema già pronto, poi modificato</span></td>
+              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Spesso parte da un tema già pronto, poi modificato</span></td>
               <td class="cmp-col-fdt cmp-no" data-who="Fai da te"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M7 7l10 10M17 7 7 17"/></svg><span class="sr-only">No: </span></span><span class="cmp-txt">Un modello scelto da un catalogo</span></td>
-              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Dipende da chi lo fa</span></td>
+              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Spesso un tema gratuito, adattato</span></td>
               <td class="cmp-col-me cmp-si" data-who="Eff$Kappa"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="m6 12.5 4 4 8-9"/></svg><span class="sr-only">Sì: </span></span><span class="cmp-txt">Scritto a mano, su misura</span></td>
             </tr>
             <tr style="--r:3">
               <th scope="row" tabindex="0"><span class="cmp-voce">Leggerezza</span><span class="cmp-tip">Ogni componente aggiuntivo è codice che il telefono del tuo cliente deve scaricare.</span></th>
-              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Dipende dal tema e dai componenti aggiunti</span></td>
-              <td class="cmp-col-fdt cmp-forse" data-who="Fai da te"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Dipende dal modello e dalle app aggiunte</span></td>
-              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Dipende</span></td>
+              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Spesso un tema con componenti aggiuntivi, più pesante</span></td>
+              <td class="cmp-col-fdt cmp-forse" data-who="Fai da te"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Il codice del modello e delle app aggiunte, anche quello che non usi</span></td>
+              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Spesso molti componenti aggiuntivi, per fare prima</span></td>
               <td class="cmp-col-me cmp-si" data-who="Eff$Kappa"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="m6 12.5 4 4 8-9"/></svg><span class="sr-only">Sì: </span></span><span class="cmp-txt">Niente componenti inutili, foto compresse</span></td>
             </tr>
             <tr style="--r:4">
               <th scope="row" tabindex="0"><span class="cmp-voce">Costi</span><span class="cmp-tip">Sai quanto spendi prima di iniziare, senza ore che si aggiungono strada facendo.</span></th>
-              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Di solito più alti, a volte con canoni</span></td>
-              <td class="cmp-col-fdt cmp-forse" data-who="Fai da te"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Canone della piattaforma, che si rinnova</span></td>
-              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Basso, ma senza un accordo scritto</span></td>
+              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Di solito più alti, a volte con canoni</span></td>
+              <td class="cmp-col-fdt cmp-forse" data-who="Fai da te"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Canone della piattaforma, che si rinnova</span></td>
+              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Basso, ma senza un accordo scritto</span></td>
               <td class="cmp-col-me cmp-si" data-who="Eff$Kappa"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="m6 12.5 4 4 8-9"/></svg><span class="sr-only">Sì: </span></span><span class="cmp-txt">Preventivo scritto a prezzo fisso, 50% all'inizio e 50% alla consegna; dominio e spazio web a parte, a tuo nome</span></td>
             </tr>
             <tr style="--r:5">
               <th scope="row" tabindex="0"><span class="cmp-voce">Di chi è il sito</span><span class="cmp-tip">Se un giorno cambi fornitore, ti porti via tutto.</span></th>
-              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Dipende dal contratto</span></td>
+              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Dipende dal contratto</span></td>
               <td class="cmp-col-fdt cmp-no" data-who="Fai da te"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M7 7l10 10M17 7 7 17"/></svg><span class="sr-only">No: </span></span><span class="cmp-txt">Di solito resta sulla piattaforma</span></td>
-              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Spesso non è chiaro</span></td>
+              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Spesso non è chiaro</span></td>
               <td class="cmp-col-me cmp-si" data-who="Eff$Kappa"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="m6 12.5 4 4 8-9"/></svg><span class="sr-only">Sì: </span></span><span class="cmp-txt">Codice e dominio a tuo nome</span></td>
             </tr>
             <tr style="--r:6">
               <th scope="row" tabindex="0"><span class="cmp-voce">Se serve aiuto dopo</span><span class="cmp-tip">Chi ha scritto il sito lo conosce riga per riga: le correzioni sono più veloci.</span></th>
-              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Assistenza di solito a pagamento</span></td>
-              <td class="cmp-col-fdt cmp-forse" data-who="Fai da te"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Il supporto della piattaforma, non sul tuo sito</span></td>
-              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">Dipende: </span></span><span class="cmp-txt">Dipende da quanto è disponibile</span></td>
+              <td class="cmp-col-ag cmp-forse" data-who="Agenzia"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Assistenza di solito a pagamento</span></td>
+              <td class="cmp-col-fdt cmp-forse" data-who="Fai da te"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Il supporto della piattaforma, non sul tuo sito</span></td>
+              <td class="cmp-col-con cmp-forse" data-who="Il conoscente"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M6 12h12"/></svg><span class="sr-only">In parte: </span></span><span class="cmp-txt">Quando ha tempo, senza tempi garantiti</span></td>
               <td class="cmp-col-me cmp-si" data-who="Eff$Kappa"><span class="cmp-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="m6 12.5 4 4 8-9"/></svg><span class="sr-only">Sì: </span></span><span class="cmp-txt">30 giorni gratis, poi preventivo o assistenza mensile su misura; rispondo entro 24 ore</span></td>
             </tr>
             </tbody>
@@ -864,11 +865,11 @@
           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
           Prima chiamata gratuita
         </a>
-        <span class="contact-phone mono">345 451 7186</span>
+        <a class="contact-phone mono" href="tel:+393454517186">345 451 7186</a>
       </div>
       <p class="contact-or">oppure via email</p>
       <a class="mail" href="mailto:effekappatech@gmail.com?subject=Nuovo%20progetto">effekappatech@gmail.com</a>
-      <blockquote class="quote">La funzione del buon software è di rendere semplice il complesso.</blockquote>
+      <figure class="quote-wrap"><blockquote class="quote">La funzione del buon software è di rendere semplice il complesso.</blockquote><figcaption class="quote-by mono">— attribuita a Grady Booch</figcaption></figure>
     </section>
   </main>
 
