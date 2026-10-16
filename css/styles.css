@@ -985,19 +985,19 @@ html.opening .gate-btn { pointer-events: none; }
 .vt-card:hover .vt-iphone { transform: translateY(-1.2cqh); }
 
 /* cruscotto del gestionale, versione telefono (dati fittizi) */
-.vt-mdash { display: flex; flex-direction: column; gap: 1.6cqh; height: 100%; padding: 6.5cqh 2.2cqh 2cqh; background: #f6f4ee; color: #1d2a25; font-size: 1.9cqh; }
-.vt-md-top { display: flex; justify-content: space-between; align-items: center; font-size: 2.1cqh; color: #005743; }
-.vt-md-top em { font-style: normal; font-weight: 400; font-size: 1.6cqh; color: #6b7570; }
+.vt-mdash { display: flex; flex-direction: column; gap: 1.4cqh; height: 100%; padding: 6.5cqh 2cqh 2cqh; background: #f6f4ee; color: #1d2a25; font-size: 2.3cqh; }
+.vt-md-top { display: flex; justify-content: space-between; align-items: center; font-size: 2.6cqh; color: #005743; }
+.vt-md-top em { font-style: normal; font-weight: 400; font-size: 2.1cqh; color: #6b7570; }
 .vt-md-kpi { display: grid; grid-template-columns: 1fr auto; align-items: baseline; padding: 1.4cqh 1.8cqh; border-radius: 1.4cqh; background: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, .06); }
-.vt-md-kpi small { grid-column: 1 / -1; font-size: 1.5cqh; color: #6b7570; }
-.vt-md-kpi strong { font-size: 3.2cqh; font-weight: 700; }
-.vt-md-kpi em, .vt-md-row em { font-style: normal; font-weight: 700; font-size: 1.6cqh; }
+.vt-md-kpi small { grid-column: 1 / -1; font-size: 2.3cqh; font-weight: 500; color: #4f5a55; }
+.vt-md-kpi strong { font-size: 4cqh; font-weight: 700; }
+.vt-md-kpi em, .vt-md-row em { font-style: normal; font-weight: 700; font-size: 2.2cqh; }
 .vt-md-chart { flex: 1; min-height: 0; padding: 1.2cqh; border-radius: 1.4cqh; background: #fff; }
 .vt-md-chart svg { display: block; width: 100%; height: 100%; }
 .vt-md-chart polyline { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; }
 .vt-md-chart .ly { stroke: #c8cfcb; stroke-dasharray: 4 4; }
 .vt-md-chart .cy { stroke: #005743; }
-.vt-md-row { display: flex; align-items: center; gap: 1.2cqh; padding: 1cqh 1.6cqh; border-radius: 1.2cqh; background: #fff; font-size: 1.6cqh; }
+.vt-md-row { display: flex; align-items: center; gap: 1.2cqh; padding: 1cqh 1.6cqh; border-radius: 1.2cqh; background: #fff; font-size: 2.1cqh; }
 .vt-md-row em { margin-left: auto; }
 .vt-md-row .dot { flex: none; }
 
@@ -1313,3 +1313,21 @@ html.opening .gate-btn { pointer-events: none; }
 @keyframes presto-nuvola { to { transform: translate(3cqh, -4cqh) scale(1.15); } }
 @keyframes presto-barra { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
 @media (prefers-reduced-motion: reduce) { .vt-presto i, .vt-presto-barra span { animation: none; } }
+
+/* ---------- Telefono e tablet: ogni cosa da toccare alta almeno 44 px (l'aspetto non cambia) ---------- */
+@media (max-width: 1024px), (pointer: coarse) {
+  .site-header { padding-top: 12px; padding-bottom: 12px; } /* link più alti: la testata resta alta come prima */
+  .wordmark, .site-nav a, .site-footer a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; }
+  .hero-link { display: inline-flex; align-items: flex-end; min-height: 44px; }
+  .project-link, .mail { display: inline-flex; align-items: flex-end; min-height: 44px; padding-bottom: 3px; }
+  .round-sm { width: 44px; height: 44px; }
+  .tab, .cmp-btn { min-height: 44px; }
+  .carousel-dots button { width: 44px; height: 44px; }
+}
+/* schede delle sezioni su telefono: griglia regolare, mai una sola scheda a capo */
+@media (max-width: 600px) {
+  .tabs { display: grid; grid-template-columns: repeat(3, 1fr); flex: 1; }
+  .tabs-4 { grid-template-columns: repeat(2, 1fr); }
+  .tabs-2 { grid-template-columns: repeat(2, 1fr); }
+  .tab { padding: 8px 6px; white-space: nowrap; text-align: center; }
+}

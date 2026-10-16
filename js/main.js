@@ -34,8 +34,9 @@
   // ---------- Recensione: lo screenshot del messaggio si apre grande ----------
   const proof = document.querySelector('[data-proof]');
   if (proof && proof.showModal) {
-    const big = proof.querySelector('img');
+    let big = null;
     document.querySelectorAll('[data-proof-open]').forEach((b) => b.addEventListener('click', () => {
+      if (!big) { big = document.createElement('img'); big.width = 1000; big.decoding = 'async'; proof.prepend(big); }
       big.src = b.dataset.full; big.alt = b.dataset.alt; big.height = +b.dataset.h;
       proof.showModal();
     }));
