@@ -228,7 +228,7 @@ main, .site-footer { position: relative; z-index: 1; }
 .about, .work, .review, .services, .method, .faq, .compare, .compare-why {
   max-width: var(--max);
   margin: 0 auto;
-  padding: clamp(88px, 13vh, 150px) var(--gutter) 0;
+  padding: clamp(56px, 8vh, 96px) var(--gutter) 0;
   box-sizing: content-box;
 }
 .section-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
@@ -262,6 +262,16 @@ main, .site-footer { position: relative; z-index: 1; }
 .carousel-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
 .carousel-count { color: var(--muted); }
 .carousel-count span { color: var(--gold); }
+/* invito a scorrere le recensioni, con la freccia che spinge piano */
+.review-car .carousel-top { flex-wrap: wrap; gap: 16px; }
+.review-car .carousel-nav { margin-left: auto; }
+.review-top-left { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; }
+.carousel-hint { display: inline-flex; align-items: center; gap: 8px; margin: 0; color: var(--gold-hi); font-size: 13px; letter-spacing: .04em; }
+.hint-corto { display: none; }
+@media (max-width: 600px) { .hint-lungo { display: none; } .hint-corto { display: inline; } .carousel-hint { white-space: nowrap; } }
+.carousel-hint i { font-style: normal; display: inline-block; animation: spinta 1.6s ease-in-out infinite; }
+@keyframes spinta { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+@media (prefers-reduced-motion: reduce) { .carousel-hint i { animation: none; } }
 .carousel-nav { display: flex; gap: 10px; }
 .carousel-track {
   display: grid;
@@ -306,7 +316,7 @@ main, .site-footer { position: relative; z-index: 1; }
 
 /* ---------- Fascia dei settori (scorre da sola, ferma col movimento ridotto) ---------- */
 .marquee {
-  margin-top: clamp(56px, 9vh, 96px);
+  margin-top: clamp(40px, 6vh, 64px);
   border-top: 1px solid var(--line-2);
   border-bottom: 1px solid var(--line-2);
   overflow: hidden;
@@ -340,7 +350,7 @@ main, .site-footer { position: relative; z-index: 1; }
 .chip.is-active span { color: rgba(10, 9, 8, .6); }
 
 /* ---------- Categoria e scena ---------- */
-.category { margin-bottom: clamp(80px, 11vh, 130px); }
+.category { margin-bottom: clamp(24px, 4vh, 48px); }
 .category-title {
   display: flex;
   align-items: baseline;
@@ -611,7 +621,7 @@ a.project-media:hover .browser { border-color: rgba(212, 175, 106, .45); }
 .contact {
   position: relative;
   max-width: 1100px;
-  margin: clamp(100px, 14vh, 160px) auto clamp(60px, 10vh, 120px);
+  margin: clamp(64px, 9vh, 104px) auto clamp(48px, 7vh, 80px);
   margin-left: max(var(--gutter), calc((100% - 1100px) / 2));
   margin-right: max(var(--gutter), calc((100% - 1100px) / 2));
   padding: clamp(40px, 7vw, 80px) clamp(20px, 5vw, 64px);
@@ -1216,6 +1226,8 @@ html.opening .gate-btn { pointer-events: none; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0, 0, 0, .4), 0 0 28px rgba(212, 175, 106, .12); }
 .stack { margin-top: 28px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 /* due gruppi uguali, ognuno più largo dello schermo: spostando di metà il giro è continuo */
+.stack-band { max-width: var(--max); margin: clamp(48px, 7vh, 80px) auto 0; padding: 0 var(--gutter); box-sizing: content-box; }
+.stack-band .stack { margin-top: 0; }
 .stack-track { display: flex; width: max-content; animation: marquee 60s linear infinite; }
 .stack-group { display: flex; gap: 10px; padding-right: 10px; }
 .stack:hover .stack-track { animation-play-state: paused; }
@@ -1256,17 +1268,20 @@ html.opening .gate-btn { pointer-events: none; }
 @media (prefers-reduced-motion: reduce) { .js .category.is-on { animation: none; } }
 
 /* ---------- Recensione di Thomas (Hedoné), con il messaggio originale ---------- */
-.review-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+.review-item { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+/* carosello: una recensione per volta; spazio sopra e sotto per virgolette, cornice e ombra */
+.review .carousel-track.review-track { grid-auto-columns: 100%; gap: 48px; padding: 8px 0 48px; }
+.review-item { scroll-snap-align: start; padding-top: clamp(40px, 4.5vw, 60px); }
 .review-main { position: relative; margin: 0; }
-.review-main::before { content: '«'; position: absolute; top: -.62em; right: 0; font-size: clamp(90px, 10vw, 140px); line-height: 1; color: var(--gold); opacity: .18; pointer-events: none; }
-.review-main .eyebrow { margin-bottom: 22px; }
+.review-main::before { content: '«'; position: absolute; top: -.72em; right: 0; font-size: clamp(64px, 6.5vw, 92px); line-height: 1; color: var(--gold); opacity: .18; pointer-events: none; }
 .review-text { margin: 0; display: grid; gap: 16px; }
 .review-text p { color: var(--muted); font-size: clamp(17px, 1.55vw, 21px); line-height: 1.6; text-wrap: pretty; }
 .review-text mark { background: none; color: var(--cream); font-weight: 500; box-shadow: inset 0 -1px 0 var(--gold); }
 .review-text .review-end { color: var(--gold-hi); font-size: clamp(22px, 2.2vw, 30px); font-weight: 500; letter-spacing: -.02em; line-height: 1.3; }
 .review-main figcaption { display: flex; flex-direction: column; gap: 4px; margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); }
 .review-main figcaption b { color: var(--cream); font-weight: 500; font-size: 18px; }
-.review-main figcaption span { color: var(--muted); font-size: 15px; }
+.review-main figcaption > span { color: var(--muted); font-size: 15px; }
+.review-main figcaption .project-link { align-self: flex-start; margin-top: 12px; }
 /* lo screenshot, leggermente inclinato come un foglio appoggiato */
 .review-proof { justify-self: center; display: flex; flex-direction: column; align-items: center; gap: 16px; max-width: 340px; padding: 0; border: 0; background: none; color: inherit; cursor: zoom-in; }
 .review-proof img { width: 100%; height: auto; border-radius: 18px; outline: 1px solid rgba(212, 175, 106, .45); outline-offset: 8px; box-shadow: 0 30px 70px rgba(0, 0, 0, .55); transform: rotate(2deg); transition: transform .4s cubic-bezier(.2, .7, .2, 1); }
@@ -1277,7 +1292,7 @@ html.opening .gate-btn { pointer-events: none; }
 .proof-dialog img { display: block; width: 100%; height: auto; max-height: calc(100dvh - 32px); object-fit: contain; border-radius: 18px; }
 .proof-close { position: absolute; top: 10px; right: 10px; background: rgba(0, 0, 0, .7); }
 @media (max-width: 860px) {
-  .review-grid { grid-template-columns: 1fr; }
-  .review-proof { max-width: 260px; }
+  .review-item { grid-template-columns: 1fr; }
+  .review-proof { max-width: 210px; }
 }
 @media (prefers-reduced-motion: reduce) { .review-proof img { transition: none; } }

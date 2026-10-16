@@ -33,9 +33,12 @@
 
   // ---------- Recensione: lo screenshot del messaggio si apre grande ----------
   const proof = document.querySelector('[data-proof]');
-  const proofOpen = document.querySelector('[data-proof-open]');
-  if (proof && proofOpen && proof.showModal) {
-    proofOpen.addEventListener('click', () => proof.showModal());
+  if (proof && proof.showModal) {
+    const big = proof.querySelector('img');
+    document.querySelectorAll('[data-proof-open]').forEach((b) => b.addEventListener('click', () => {
+      big.src = b.dataset.full; big.alt = b.dataset.alt; big.height = +b.dataset.h;
+      proof.showModal();
+    }));
     proof.querySelector('[data-proof-close]').addEventListener('click', () => proof.close());
     // tocco fuori dall'immagine: chiude
     proof.addEventListener('click', (e) => { if (e.target === proof) proof.close(); });

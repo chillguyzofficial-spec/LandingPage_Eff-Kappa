@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=51">
+<link rel="stylesheet" href="css/styles.css?v=58">
 <script>
 (function () {
   var h = document.documentElement;
@@ -47,8 +47,8 @@
   <header class="site-header">
     <a href="#top" class="wordmark">Eff<span class="dollar">$</span>Kappa</a>
     <nav class="site-nav">
-      <a href="#lavori">Lavori</a>
       <a href="#chi-sono">Chi sono</a>
+      <a href="#lavori">Lavori</a>
       <a href="#servizi">Servizi</a>
       <a href="#metodo">Metodo</a>
       <a href="#contatti">Contatti</a>
@@ -67,8 +67,8 @@
         <p class="lead hero-in">Un sito <strong>scritto a mano</strong> per il tuo ristorante, il tuo negozio o il tuo studio, <strong>online in poche settimane</strong>. Si apre <strong>in fretta sul telefono</strong> e porta dritto a <strong>prenotare, comprare o scriverti</strong>.</p>
         <div class="hero-actions hero-in">
           <a href="#contatti" class="btn btn-gold">Raccontami il progetto <span aria-hidden="true">→</span></a>
-          <a href="#lavori" class="hero-link">Guarda i lavori <span aria-hidden="true">↓</span></a>
           <a href="#chi-sono" class="hero-link">Chi sono <span aria-hidden="true">↓</span></a>
+          <a href="#lavori" class="hero-link">Guarda i lavori <span aria-hidden="true">↓</span></a>
         </div>
       </div>
       <figure class="hero-proof hero-in">
@@ -98,10 +98,35 @@
       </div>
     </div>
 
+    <!-- Chi c'è dietro -->
+    <section class="about" id="chi-sono">
+      <div class="about-top">
+        <figure class="about-photo" data-reveal>
+          <img src="assets/francesco.webp" alt="Francesco Mascolo, lo sviluppatore dietro Eff$Kappa" width="760" height="1140" loading="lazy" decoding="async">
+          <figcaption class="mono">Francesco Mascolo · sviluppatore</figcaption>
+        </figure>
+        <div class="about-text">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow"><span class="idx">01</span>Chi c'è dietro</p>
+            <h2 data-words>Ogni sito, scritto riga per riga.</h2>
+          </div>
+          <p class="about-lead" data-reveal>Sono Francesco, sviluppatore. Siti, gestionali e app li progetto, li scrivo e li pubblico io, da solo: quando chiedi una modifica la leggo, la faccio e te la mando da vedere.</p>
+
+          <dl class="spec" data-reveal>
+            <div style="--i:0"><dt><span class="mono">01</span>Cosa faccio</dt><dd>Siti, negozi online, gestionali e app da installare</dd></div>
+            <div style="--i:1"><dt><span class="mono">02</span>Strumenti</dt><dd>Codice scritto a mano; Next.js e Node.js per i gestionali; Shopify per i negozi con tanti prodotti</dd></div>
+            <div style="--i:2"><dt><span class="mono">03</span>Controlli</dt><dd>Prove automatiche su telefono, tablet e computer prima di ogni consegna</dd></div>
+            <div style="--i:3"><dt><span class="mono">04</span>Primo sito online</dt><dd><span class="spec-live"></span>Hedoné, Vimodrone <em>· da settembre 2026</em></dd></div>
+            <div style="--i:4"><dt><span class="mono">05</span>Contatti</dt><dd>WhatsApp ed email <em>· risposta entro 24 ore</em></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
     <!-- Lavori -->
     <section class="work" id="lavori">
       <div class="section-head" data-reveal>
-        <p class="eyebrow"><span class="idx">01</span>Lavori</p>
+        <p class="eyebrow"><span class="idx">02</span>Lavori</p>
         <h2>Sei lavori, sei settori.</h2>
         <p class="section-sub">Uno per settore, tutti aperti e navigabili. Scegli un lavoro per vederne le pagine, sul computer e sul telefono.</p>
       </div>
@@ -465,76 +490,70 @@
 
     </section>
 
-    <!-- Recensione vera di un cliente, con lo screenshot del messaggio originale -->
+    <!-- Recensioni vere di clienti, con lo screenshot del messaggio originale -->
     <section class="review" id="recensioni">
-      <div class="review-grid">
-        <figure class="review-main" data-reveal>
-          <p class="eyebrow">Dicono di me</p>
-          <blockquote class="review-text">
-            <p>Ho conosciuto Francesco tramite un lavoro online, facendo qualche chiacchiera mi ha parlato anche che costruisce siti web su misura. Avendo un'attività di ristorazione e un sito web obsoleto, ho colto l'occasione di fargli mettere mano e farglielo elaborare.</p>
-            <p>Sono rimasto stupito da tutto, <mark>segue il cliente passo passo, testo dopo testo e fotografia dopo fotografia</mark>. Un modo di lavorare totalmente innovativo. Dopo tutto questo, Francesco ci segue anche per ogni singolo aggiornamento pagina, per esempio il cambio menù, <mark>in tempi record</mark> riesce a modificare descrizione e fotografie.</p>
-            <p class="review-end">Lo consiglio? Assolutamente sì.</p>
-          </blockquote>
-          <figcaption><b>Thomas Arduini</b><span>Titolare di Hedoné, Vimodrone</span></figcaption>
-        </figure>
-        <button type="button" class="review-proof" data-proof-open aria-haspopup="dialog" data-reveal>
-          <img src="assets/recensioni/thomas-hedone-520.webp" alt="Screenshot del messaggio WhatsApp con la recensione di Thomas Arduini" width="520" height="646" loading="lazy" decoding="async">
-          <span class="review-proof-label mono">Il messaggio originale su WhatsApp <span aria-hidden="true">↗</span></span>
-        </button>
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Dicono di me</p>
+        <h2>I clienti, con parole loro.</h2>
+        <p class="section-sub">Messaggi arrivati su WhatsApp, riportati come li hanno scritti. Tocca lo screenshot per leggere l'originale.</p>
       </div>
-      <dialog class="proof-dialog" data-proof aria-label="Messaggio originale di Thomas Arduini">
-        <img src="assets/recensioni/thomas-hedone-1000.webp" alt="Messaggio WhatsApp di Thomas Arduini, titolare di Hedoné, con la recensione completa" width="1000" height="1243" loading="lazy" decoding="async">
+      <div class="carousel review-car" data-carousel data-reveal>
+        <div class="carousel-top">
+          <div class="review-top-left">
+            <p class="mono carousel-count" aria-live="polite"><span data-count>01</span> / 02</p>
+            <p class="carousel-hint mono"><span class="hint-lungo">Scorri o usa le frecce per leggere l'altra recensione</span><span class="hint-corto">Scorri per l'altra recensione</span> <i aria-hidden="true">→</i></p>
+          </div>
+          <div class="carousel-nav">
+            <button type="button" class="round" data-prev aria-label="Recensione precedente"><span aria-hidden="true">←</span></button>
+            <button type="button" class="round" data-next aria-label="Recensione successiva"><span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+        <ul class="carousel-track review-track" data-track>
+        <li class="review-item">
+          <figure class="review-main">
+            <blockquote class="review-text">
+              <p>Ho conosciuto Francesco tramite un lavoro online, facendo qualche chiacchiera mi ha parlato anche che costruisce siti web su misura. Avendo un'attività di ristorazione e un sito web obsoleto, ho colto l'occasione di fargli mettere mano e farglielo elaborare.</p>
+              <p>Sono rimasto stupito da tutto, <mark>segue il cliente passo passo, testo dopo testo e fotografia dopo fotografia</mark>. Un modo di lavorare totalmente innovativo. Dopo tutto questo, Francesco ci segue anche per ogni singolo aggiornamento pagina, per esempio il cambio menù, <mark>in tempi record</mark> riesce a modificare descrizione e fotografie.</p>
+              <p class="review-end">Lo consiglio? Assolutamente sì.</p>
+            </blockquote>
+            <figcaption><b>Thomas Arduini</b><span>Titolare del ristorante Hedoné, Vimodrone</span><a class="project-link" href="#lavoro-ristorazione">Guarda il sito di Hedoné <span aria-hidden="true">↑</span></a></figcaption>
+          </figure>
+          <button type="button" class="review-proof" data-proof-open data-full="assets/recensioni/thomas-hedone-1000.webp" data-h="1243" data-alt="Messaggio WhatsApp di Thomas Arduini con la recensione completa" aria-haspopup="dialog">
+            <img src="assets/recensioni/thomas-hedone-520.webp" alt="Screenshot del messaggio WhatsApp con la recensione di Thomas Arduini" width="520" height="646" decoding="async">
+            <span class="review-proof-label mono">Il messaggio originale su WhatsApp <span aria-hidden="true">↗</span></span>
+          </button>
+        </li>
+        <li class="review-item">
+          <figure class="review-main">
+            <blockquote class="review-text">
+              <p>Sono davvero soddisfatto del lavoro svolto! <mark>Hai sviluppato il gestionale completamente da zero</mark>, ascoltando fin da subito le mie esigenze e trasformando le mie idee in un <mark>prodotto concreto, funzionale e intuitivo</mark>.</p>
+              <p>Durante tutto il progetto ti sei dimostrato professionale, disponibile e attento ai dettagli, rispettando le mie richieste e trovando sempre soluzioni adatte alle mie necessità. Il risultato finale ha rispecchiato pienamente le mie aspettative.</p>
+              <p class="review-end">Un lavoro fatto con competenza e passione, che consiglio assolutamente!</p>
+            </blockquote>
+            <figcaption><b>Alexandru Iancu</b><span>Socio titolare di Home Unity, affitti brevi</span><a class="project-link" href="#lavoro-gestionali">Guarda il gestionale <span aria-hidden="true">↑</span></a></figcaption>
+          </figure>
+          <button type="button" class="review-proof" data-proof-open data-full="assets/recensioni/alex-homeunity-1000.webp" data-h="1036" data-alt="Messaggio WhatsApp di Alexandru Iancu con la recensione completa" aria-haspopup="dialog">
+            <img src="assets/recensioni/alex-homeunity-520.webp" alt="Screenshot del messaggio WhatsApp con la recensione di Alexandru Iancu" width="520" height="539" decoding="async">
+            <span class="review-proof-label mono">Il messaggio originale su WhatsApp <span aria-hidden="true">↗</span></span>
+          </button>
+        </li>
+        </ul>
+        <div class="carousel-dots" data-dots></div>
+      </div>
+      <dialog class="proof-dialog" data-proof aria-label="Messaggio originale">
+        <img alt="" width="1000" height="1243" decoding="async">
         <button type="button" class="round proof-close" data-proof-close aria-label="Chiudi"><span aria-hidden="true">✕</span></button>
       </dialog>
     </section>
 
-    <!-- Chi c'è dietro -->
-    <section class="about" id="chi-sono">
-      <div class="about-top">
-        <figure class="about-photo" data-reveal>
-          <img src="assets/francesco.webp" alt="Francesco Mascolo, lo sviluppatore dietro Eff$Kappa" width="760" height="1140" loading="lazy" decoding="async">
-          <figcaption class="mono">Francesco Mascolo · sviluppatore</figcaption>
-        </figure>
-        <div class="about-text">
-          <div class="section-head" data-reveal>
-            <p class="eyebrow"><span class="idx">02</span>Chi c'è dietro</p>
-            <h2 data-words>Ogni sito, scritto riga per riga.</h2>
+    <!-- Fascia delle tecnologie: dopo le recensioni, lontana da quella dei settori -->
+    <div class="stack-band">
+        <div class="stack" aria-label="Con cosa lavoro">
+          <div class="stack-track">
+            <div class="stack-group"><span class="mono">HTML5</span><span class="mono">CSS3</span><span class="mono">JavaScript</span><span class="mono">Prima il telefono</span><span class="mono">Ricerca su Google</span><span class="mono" aria-hidden="true">HTML5</span><span class="mono" aria-hidden="true">CSS3</span><span class="mono" aria-hidden="true">JavaScript</span><span class="mono" aria-hidden="true">Prima il telefono</span><span class="mono" aria-hidden="true">Ricerca su Google</span><span class="mono" aria-hidden="true">HTML5</span><span class="mono" aria-hidden="true">CSS3</span><span class="mono" aria-hidden="true">JavaScript</span><span class="mono" aria-hidden="true">Prima il telefono</span><span class="mono" aria-hidden="true">Ricerca su Google</span></div><div class="stack-group" aria-hidden="true"><span class="mono">HTML5</span><span class="mono">CSS3</span><span class="mono">JavaScript</span><span class="mono">Prima il telefono</span><span class="mono">Ricerca su Google</span><span class="mono">HTML5</span><span class="mono">CSS3</span><span class="mono">JavaScript</span><span class="mono">Prima il telefono</span><span class="mono">Ricerca su Google</span><span class="mono">HTML5</span><span class="mono">CSS3</span><span class="mono">JavaScript</span><span class="mono">Prima il telefono</span><span class="mono">Ricerca su Google</span></div>
           </div>
-          <p class="about-lead" data-reveal>Sono Francesco, sviluppatore. Siti, gestionali e app li progetto, li scrivo e li pubblico io, da solo: quando chiedi una modifica la leggo, la faccio e te la mando da vedere.</p>
-
-          <dl class="spec" data-reveal>
-            <div style="--i:0"><dt><span class="mono">01</span>Cosa faccio</dt><dd>Siti, negozi online, gestionali e app da installare</dd></div>
-            <div style="--i:1"><dt><span class="mono">02</span>Strumenti</dt><dd>Codice scritto a mano; Next.js e Node.js per i gestionali; Shopify per i negozi con tanti prodotti</dd></div>
-            <div style="--i:2"><dt><span class="mono">03</span>Controlli</dt><dd>Prove automatiche su telefono, tablet e computer prima di ogni consegna</dd></div>
-            <div style="--i:3"><dt><span class="mono">04</span>Primo sito online</dt><dd><span class="spec-live"></span>Hedoné, Vimodrone <em>· da settembre 2026</em></dd></div>
-            <div style="--i:4"><dt><span class="mono">05</span>Contatti</dt><dd>WhatsApp ed email <em>· risposta entro 24 ore</em></dd></div>
-          </dl>
         </div>
-      </div>
-
-      <div class="stack" aria-label="Con cosa lavoro">
-        <div class="stack-track">
-          <div class="stack-group"><span class="mono">HTML5</span><span class="mono">CSS3</span><span class="mono">JavaScript</span><span class="mono">Prima il telefono</span><span class="mono">Ricerca su Google</span><span class="mono" aria-hidden="true">HTML5</span><span class="mono" aria-hidden="true">CSS3</span><span class="mono" aria-hidden="true">JavaScript</span><span class="mono" aria-hidden="true">Prima il telefono</span><span class="mono" aria-hidden="true">Ricerca su Google</span><span class="mono" aria-hidden="true">HTML5</span><span class="mono" aria-hidden="true">CSS3</span><span class="mono" aria-hidden="true">JavaScript</span><span class="mono" aria-hidden="true">Prima il telefono</span><span class="mono" aria-hidden="true">Ricerca su Google</span></div><div class="stack-group" aria-hidden="true"><span class="mono">HTML5</span><span class="mono">CSS3</span><span class="mono">JavaScript</span><span class="mono">Prima il telefono</span><span class="mono">Ricerca su Google</span><span class="mono">HTML5</span><span class="mono">CSS3</span><span class="mono">JavaScript</span><span class="mono">Prima il telefono</span><span class="mono">Ricerca su Google</span><span class="mono">HTML5</span><span class="mono">CSS3</span><span class="mono">JavaScript</span><span class="mono">Prima il telefono</span><span class="mono">Ricerca su Google</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prima e dopo: resta nascosta finché non ci sono entrambe le immagini -->
-    <section class="compare" id="prima-dopo" data-compare hidden>
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">Prima e dopo</p>
-        <h2>Lo stesso locale, due siti.</h2>
-        <p class="section-sub">Trascina la maniglia: a sinistra il vecchio sito di Hedoné, a destra quello che ho scritto io.</p>
-      </div>
-      <div class="ba" data-ba data-reveal>
-        <img class="ba-after" src="assets/prima-dopo/hedone-dopo.webp" alt="Il sito nuovo di Hedoné" width="1440" height="900" loading="lazy" decoding="async">
-        <div class="ba-before"><img src="assets/prima-dopo/hedone-prima.webp" alt="Il vecchio sito WordPress di Hedoné" width="1440" height="900" loading="lazy" decoding="async"></div>
-        <span class="ba-label ba-label-l mono">Prima</span>
-        <span class="ba-label ba-label-r mono">Dopo</span>
-        <span class="ba-handle" aria-hidden="true"><i>↔</i></span>
-        <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Sposta il confronto tra il sito vecchio e quello nuovo">
-      </div>
-    </section>
+    </div>
 
     <!-- Servizi -->
     <section class="services" id="servizi">
@@ -842,6 +861,6 @@
     <a href="#top">Torna su ↑</a>
   </footer>
 
-  <script src="js/main.js?v=21"></script>
+  <script src="js/main.js?v=22"></script>
 </body>
 </html>
