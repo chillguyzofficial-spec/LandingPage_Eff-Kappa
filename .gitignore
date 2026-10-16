@@ -1,2 +1,8 @@
 # screenshot del login del gestionale Home Unity: non usati dalla pagina, restano solo in locale
 assets/shots/gestionale-*.jpg
+# copia di sicurezza locale, non va online
+index.backup.html
+# materiale originale (foto, sorgenti), non va online
+design-source/
+# generatore e prove della pagina: lavorano in locale, non vanno online
+_build/
