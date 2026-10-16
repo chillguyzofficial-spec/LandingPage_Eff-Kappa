@@ -246,13 +246,13 @@ main, .site-footer { position: relative; z-index: 1; }
   display: grid;
   grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
   gap: clamp(32px, 5vw, 80px);
-  align-items: end;
-  margin-bottom: 64px;
+  align-items: start;
+  margin-bottom: 48px;
 }
 .about-photo { display: flex; flex-direction: column; gap: 28px; }
 .about-photo img { width: 100%; border-radius: 18px; border: 1px solid var(--line-2); box-shadow: 0 30px 70px rgba(0, 0, 0, .5); }
 .about-text .section-head { margin-bottom: 28px; }
-.about-lead { color: var(--cream); font-size: clamp(19px, 1.9vw, 25px); line-height: 1.5; letter-spacing: -.01em; max-width: 46ch; text-wrap: pretty; }
+.about-lead { color: var(--cream); font-size: clamp(17px, 1.45vw, 20px); line-height: 1.55; letter-spacing: -.01em; max-width: 62ch; text-wrap: pretty; }
 @media (max-width: 800px) {
   .about-top { grid-template-columns: 1fr; margin-bottom: 48px; }
   .about-photo { max-width: 400px; }
@@ -1352,3 +1352,7 @@ main:focus { outline: none; }
 a.contact-phone { color: inherit; border-bottom: 1px solid var(--gold-dim); }
 a.contact-phone:hover { color: var(--gold-hi); }
 @media (max-width: 1024px), (pointer: coarse) { a.contact-phone { display: inline-flex; align-items: flex-end; min-height: 44px; } }
+
+/* Chi c'è dietro più compatta: titolo più piccolo degli altri, la foto parte in alto */
+.about .section-head h2 { font-size: clamp(30px, 3.4vw, 52px); }
+.about-text .section-head { margin-bottom: 20px; }
