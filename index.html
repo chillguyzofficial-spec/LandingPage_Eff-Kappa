@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=45">
+<link rel="stylesheet" href="css/styles.css?v=46">
 <script>
 (function () {
   var h = document.documentElement;
@@ -280,9 +280,19 @@
           <button type="button" class="round" data-vt-next aria-label="Lavoro successivo"><span aria-hidden="true">→</span></button>
         </div>
       </div>
+      <div class="lavori-dettaglio" id="lavori-dettaglio">
+        <div class="filters" role="group" aria-label="Scegli il settore">
+          <p class="mono filters-label">Scegli il settore</p>
+          <button type="button" class="chip is-active" data-filter="ristorazione" aria-pressed="true" aria-controls="lavoro-ristorazione"><span>01</span>Ristorazione</button>
+          <button type="button" class="chip" data-filter="moda" aria-pressed="false" aria-controls="lavoro-moda"><span>02</span>Moda &amp; Luxury</button>
+          <button type="button" class="chip" data-filter="gestionali" aria-pressed="false" aria-controls="lavoro-gestionali"><span>03</span>Gestionali</button>
+          <button type="button" class="chip" data-filter="professionisti" aria-pressed="false" aria-controls="lavoro-professionisti"><span>04</span>Professionisti</button>
+          <button type="button" class="chip" data-filter="ecommerce" aria-pressed="false" aria-controls="lavoro-ecommerce"><span>05</span>E-commerce</button>
+          <button type="button" class="chip" data-filter="fitness" aria-pressed="false" aria-controls="lavoro-fitness"><span>06</span>Fitness &amp; App</button>
+        </div>
 
       <!-- Ristorazione -->
-      <div class="category" id="lavoro-ristorazione" data-category="ristorazione">
+      <div class="category is-on" id="lavoro-ristorazione" data-category="ristorazione">
         <h3 class="category-title"><span class="mono">01</span>Ristorazione</h3>
         <article class="project" data-shots>
           <div class="project-media-wrap">
@@ -529,6 +539,7 @@
             </div>
           </div>
         </article>
+      </div>
       </div>
     </section>
 
@@ -811,6 +822,6 @@
     <a href="#top">Torna su ↑</a>
   </footer>
 
-  <script src="js/main.js?v=19"></script>
+  <script src="js/main.js?v=20"></script>
 </body>
 </html>

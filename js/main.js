@@ -358,19 +358,34 @@
     range.addEventListener('input', () => ba.style.setProperty('--pos', range.value + '%'));
   });
 
-  // ---------- Filtri per settore ----------
+  // ---------- Filtri per settore: un lavoro alla volta ----------
   const chips = [...document.querySelectorAll('[data-filter]')];
   const cats = [...document.querySelectorAll('[data-category]')];
-  chips.forEach((chip) => {
-    chip.addEventListener('click', () => {
-      const f = chip.dataset.filter;
-      chips.forEach((c) => { const on = c === chip; c.classList.toggle('is-active', on); c.setAttribute('aria-pressed', on ? 'true' : 'false'); });
-      cats.forEach((cat) => { cat.hidden = f !== 'all' && cat.dataset.category !== f; });
-      cats.forEach((cat) => cat.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in')));
-      relayout();
-    });
+  const showCat = (f) => {
+    if (!cats.some((c) => c.dataset.category === f)) return false;
+    chips.forEach((c) => { const on = c.dataset.filter === f; c.classList.toggle('is-active', on); c.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    cats.forEach((cat) => cat.classList.toggle('is-on', cat.dataset.category === f));
+    cats.forEach((cat) => cat.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in')));
+    relayout();
+    return true;
+  };
+  chips.forEach((chip) => chip.addEventListener('click', () => showCat(chip.dataset.filter)));
+  // link a un lavoro (vetrina, esempi dei servizi): apre il settore e ci porta lì
+  const goCat = (hash, smooth) => {
+    const f = hash.replace('#lavoro-', '');
+    if (!showCat(f)) return false;
+    const box = document.getElementById('lavori-dettaglio');
+    window.scrollTo({ top: box.getBoundingClientRect().top + window.scrollY - headerH() - 12, behavior: smooth && !still ? 'smooth' : 'auto' });
+    return true;
+  };
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#lavoro-"]');
+    if (!a || e.defaultPrevented) return;
+    const hash = a.getAttribute('href');
+    if (goCat(hash, true)) { e.preventDefault(); history.pushState(null, '', hash); }
   });
-  chips.forEach((c) => c.setAttribute('aria-pressed', c.classList.contains('is-active') ? 'true' : 'false'));
+  window.addEventListener('hashchange', () => { if (location.hash.startsWith('#lavoro-')) goCat(location.hash, false); });
+  if (location.hash.startsWith('#lavoro-')) window.addEventListener('load', () => goCat(location.hash, false), { once: true });
 
   // ---------- Comparsa allo scroll e contatori ----------
   const els = document.querySelectorAll('[data-reveal]');
