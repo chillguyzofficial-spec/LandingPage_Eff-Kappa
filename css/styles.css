@@ -13,8 +13,8 @@
   --gold-hi: #ecca8e;
   --gold-dim: #8b6f3f;
   --cream: #f4f1ea;
-  --muted: #b3aea4;
-  --muted-2: #8a857b;
+  --muted: #cdc8be; /* testo secondario: contrasto 11,9:1 sul nero */
+  --muted-2: #aaa59a; /* etichette e note: contrasto 8,1:1 */
   --line: rgba(212, 175, 106, .18);
   --line-2: rgba(244, 241, 234, .08);
 
@@ -84,7 +84,7 @@ main, .site-footer { position: relative; z-index: 1; }
 }
 .wordmark { font-weight: 700; font-size: 20px; letter-spacing: -.01em; }
 .dollar { color: var(--gold); }
-.site-nav { display: flex; gap: clamp(14px, 3vw, 36px); font-size: 14px; color: var(--muted); }
+.site-nav { display: flex; gap: clamp(14px, 3vw, 36px); font-size: 15px; color: var(--muted); }
 .site-nav a { transition: color .25s; }
 .site-nav a:hover { color: var(--gold-hi); }
 @media (max-width: 520px) {
@@ -185,7 +185,7 @@ main, .site-footer { position: relative; z-index: 1; }
 .hero-link::before { content: ''; position: absolute; inset: -12px -8px; }
 .hero-proof { display: flex; flex-direction: column; gap: 14px; }
 .hero-proof .project-media { margin-right: 10px; }
-.hero-proof figcaption { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; font-size: 14px; color: var(--muted); }
+.hero-proof figcaption { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; font-size: 15px; color: var(--muted); }
 .hero-proof figcaption b { color: var(--cream); font-weight: 500; }
 
 /* Numeri sotto l'apertura */
@@ -239,7 +239,7 @@ main, .site-footer { position: relative; z-index: 1; }
   letter-spacing: -.035em;
   text-wrap: balance;
 }
-.section-sub { color: var(--muted-2); font-size: 15px; max-width: 62ch; }
+.section-sub { color: var(--muted); font-size: clamp(16px, 1.3vw, 18px); line-height: 1.6; max-width: 62ch; }
 
 /* ---------- Chi c'è dietro ---------- */
 .about-top {
@@ -631,7 +631,7 @@ a.project-media:hover .browser { border-color: rgba(212, 175, 106, .45); }
 }
 .contact-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 20px; margin-top: 6px; }
 .btn-wa { font-size: 16px; padding: 16px 28px; }
-.contact-phone { font-size: 14px; color: var(--muted); }
+.contact-phone { font-size: 16px; color: var(--muted); }
 .contact-or { margin-top: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-2); }
 .mail {
   font-weight: 500;
@@ -1003,7 +1003,7 @@ html.opening .gate-btn { pointer-events: none; }
 .vt-dove { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
 .vt-titolo { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 14px; margin: 6px 0 10px; }
 .vt-nome { font-size: clamp(26px, 2.4vw, 34px); font-weight: 500; line-height: 1.08; letter-spacing: -.03em; }
-.vt-tipo { font-size: 13px; color: var(--muted); white-space: nowrap; }
+.vt-tipo { font-size: 14px; color: var(--muted); white-space: nowrap; }
 .vt-frase { font-size: 17px; line-height: 1.45; color: var(--cream); margin-bottom: 10px; }
 .vt-dettagli { display: grid; gap: 5px; }
 .vt-dettagli span { position: relative; padding-left: 16px; font-size: 15px; line-height: 1.45; color: var(--muted); }
@@ -1125,7 +1125,7 @@ html.opening .gate-btn { pointer-events: none; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 /* ---------- Dopo i 30 giorni (Sempre incluso) ---------- */
-.included-note { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line-2); font-size: 15px; line-height: 1.55; color: var(--muted); }
+.included-note { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line-2); font-size: 16px; line-height: 1.55; color: var(--muted); }
 
 /* ---------- Il confronto: le alternative, Eff$Kappa a destra ---------- */
 .compare-why .section-head h2 em { font-style: normal; display: block; }
@@ -1146,7 +1146,7 @@ html.opening .gate-btn { pointer-events: none; }
 .cmp-badge { display: inline-block; margin-bottom: 8px; padding: 3px 8px; border-radius: 999px; background: var(--gold); color: #0a0908; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
 .cmp-table tbody th { font-weight: 500; outline: none; }
 .cmp-voce { display: block; font-size: 16px; line-height: 1.35; color: var(--cream); }
-.cmp-table td { font-size: 14px; line-height: 1.45; color: var(--muted-2); }
+.cmp-table td { font-size: 15px; line-height: 1.5; color: var(--muted); }
 .cmp-ico { display: inline-grid; place-items: center; width: 24px; height: 24px; margin-bottom: 8px; border-radius: 50%; border: 1px solid var(--line-2); color: var(--muted-2); }
 .cmp-ico svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 .cmp-txt { display: block; }
@@ -1165,7 +1165,7 @@ html.opening .gate-btn { pointer-events: none; }
 /* selettore: la colonna scelta resta accanto a Eff$Kappa, le altre si attenuano */
 .cmp-wrap[data-vs="ag"] :is(.cmp-col-fdt, .cmp-col-con),
 .cmp-wrap[data-vs="fdt"] :is(.cmp-col-ag, .cmp-col-con),
-.cmp-wrap[data-vs="con"] :is(.cmp-col-ag, .cmp-col-fdt) { opacity: .28; }
+.cmp-wrap[data-vs="con"] :is(.cmp-col-ag, .cmp-col-fdt) { opacity: .4; }
 .cmp-frase { margin-top: 26px; max-width: 760px; font-size: clamp(18px, 1.8vw, 22px); line-height: 1.45; letter-spacing: -.01em; color: var(--cream); }
 /* quando non sono la scelta giusta */
 .honest { margin-top: 36px; padding: 22px 24px; border-radius: 14px; border: 1px solid var(--line-2); }
@@ -1181,7 +1181,7 @@ html.opening .gate-btn { pointer-events: none; }
 .js .cmp.is-in .cmp-table thead th, .js .cmp.is-in .cmp-table tbody tr > *, .js .cmp.is-in .cmp-table .cmp-col-me { opacity: 1; transform: none; }
 .js .cmp.is-in .cmp-wrap[data-vs="ag"] :is(.cmp-col-fdt, .cmp-col-con),
 .js .cmp.is-in .cmp-wrap[data-vs="fdt"] :is(.cmp-col-ag, .cmp-col-con),
-.js .cmp.is-in .cmp-wrap[data-vs="con"] :is(.cmp-col-ag, .cmp-col-fdt) { opacity: .28; transition-delay: 0s; }
+.js .cmp.is-in .cmp-wrap[data-vs="con"] :is(.cmp-col-ag, .cmp-col-fdt) { opacity: .4; transition-delay: 0s; }
 .js .cmp-ico path { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset .5s ease; transition-delay: calc(var(--r, 0) * 90ms + 500ms); }
 .js .cmp-col-me .cmp-ico path { transition-delay: calc(var(--r, 0) * 70ms + 1.3s); }
 .js .cmp.is-in .cmp-ico path { stroke-dashoffset: 0; }
@@ -1229,7 +1229,7 @@ html.opening .gate-btn { pointer-events: none; }
 .stack-track { display: flex; width: max-content; animation: marquee 60s linear infinite; }
 .stack-group { display: flex; gap: 10px; padding-right: 10px; }
 .stack:hover .stack-track { animation-play-state: paused; }
-.stack span { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-2); font-size: 13px; color: var(--muted); white-space: nowrap; }
+.stack span { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-2); font-size: 14px; color: var(--muted); white-space: nowrap; }
 .speed { display: inline-flex; align-items: center; gap: 12px; margin-top: 18px; font-size: 15px; color: var(--muted); }
 .speed svg { width: 40px; height: 40px; transform: rotate(-90deg); fill: none; stroke-width: 3; }
 .speed circle { stroke: var(--line-2); }
@@ -1362,12 +1362,12 @@ a.contact-phone:hover { color: var(--gold-hi); }
 .spec-item { border-bottom: 1px solid var(--line-2); }
 .spec-item summary { display: grid; grid-template-columns: 28px minmax(110px, 150px) 1fr 14px; align-items: center; gap: 14px; min-height: 56px; padding: 8px 0; cursor: pointer; list-style: none; }
 .spec-item summary::-webkit-details-marker { display: none; }
-.spec-n { color: var(--muted-2); font-size: 12px; }
+.spec-n { color: var(--muted-2); font-size: 13px; }
 .spec-t { color: var(--gold); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
 .spec-breve { color: var(--cream); font-size: clamp(15px, 1.2vw, 17px); }
 .spec-item summary:hover .spec-breve { color: var(--gold-hi); }
 .spec-item[open] .faq-icon::after { transform: rotate(0deg); }
-.spec-item p { margin: 0 0 16px; padding-left: calc(28px + 14px); color: var(--muted); font-size: 15px; line-height: 1.55; max-width: 64ch; }
+.spec-item p { margin: 0 0 16px; padding-left: calc(28px + 14px); color: var(--muted); font-size: 16px; line-height: 1.55; max-width: 64ch; }
 @media (max-width: 560px) {
   .spec-item summary { grid-template-columns: 24px 1fr 14px; gap: 4px 10px; }
   .spec-t { grid-column: 2; }
@@ -1375,3 +1375,5 @@ a.contact-phone:hover { color: var(--gold-hi); }
   .spec-item summary .faq-icon { grid-column: 3; grid-row: 1 / span 2; }
   .spec-item p { padding-left: 34px; }
 }
+/* telefoni stretti: le schede si toccano direttamente, le frecce accanto non ci stanno */
+@media (max-width: 400px) { .tabs-row > .round-sm { display: none; } .tabs { flex: 1; } }
