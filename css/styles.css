@@ -1331,3 +1331,9 @@ html.opening .gate-btn { pointer-events: none; }
   .tabs-2 { grid-template-columns: repeat(2, 1fr); }
   .tab { padding: 8px 6px; white-space: nowrap; text-align: center; }
 }
+
+/* ---------- Prezzi di partenza nei servizi ---------- */
+.svc-meta { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.svc-nota { max-width: 62ch; margin: clamp(22px, 3vh, 32px) 0 0; padding: 16px 20px; border-left: 2px solid var(--gold); background: rgba(212, 175, 106, .06); border-radius: 0 12px 12px 0; color: var(--muted); font-size: 16px; line-height: 1.55; }
+.svc-nota b { color: var(--cream); font-weight: 500; }
+.svc-meta .mono:first-child b { color: var(--gold-hi); font-size: 15px; }
